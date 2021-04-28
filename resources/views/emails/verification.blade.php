@@ -13,9 +13,9 @@
              </tr>
              <tr>
                 <td style="color:#505050;font-family:Helvetica Neue,Helvetica,Verdana,Arial,sans-serif;font-size:18px;line-height:26px;padding-top:65px">
-                    Hello, {{name}}!<br>
+                    Hello, {{$name}}!<br>
                     Your verification code is:<br><br>
-				<strong style="font-size:28px;line-height:32px">{{ code }}</strong><br><br>
+				<strong style="font-size:28px;line-height:32px">{{ $code }}</strong><br><br>
 				Your account can’t be accessed without this verification code, even if you didn’t submit this request.<br><br>
 				To keep your account secure, we recommend using a unique password for your Evolve account or using the Evolve Account Access app to sign in. Evolve Account Access’ two-factor authentication makes signing in to your account easier, without needing to remember or change passwords.<br><br>
 				<a href="">Learn more</a> and download the Evolve Account Access app.</td>
