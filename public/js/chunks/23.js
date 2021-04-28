@@ -5920,10 +5920,6 @@ var render = function() {
               "div",
               { staticClass: "flex" },
               [
-                _c("i18n"),
-                _vm._v(" "),
-                _c("search-bar"),
-                _vm._v(" "),
                 _c("cart-drop-down"),
                 _vm._v(" "),
                 _c("notification-drop-down"),
@@ -9572,6 +9568,12 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ([{
+  url: '/dashboard/office-stats',
+  name: 'Office Stats',
+  tagColor: 'warning',
+  icon: 'TrendingDownIcon',
+  i18n: 'Office Stats'
+}, {
   url: '/dashboard/ifx-trading-market',
   name: 'Dashboard',
   tagColor: 'warning',

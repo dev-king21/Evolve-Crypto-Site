@@ -110331,6 +110331,9 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.filter('filter_tags', function (value
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.filter('k_formatter', function (num) {
   return num > 999 ? "".concat((num / 1000).toFixed(1), "k") : num;
 });
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.filter('price_formatter', function (num) {
+  return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+});
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.filter('formatDate', function (value) {
   if (value) {
     return moment__WEBPACK_IMPORTED_MODULE_1___default()(String(value)).format('MM/DD/YYYY hh:mm');
@@ -111987,10 +111990,19 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
       path: '/',
       redirect: '/dashboard/ifx-trading-market'
     }, {
+      path: '/dashboard/office-stats',
+      name: 'dashboard-stats',
+      component: function component() {
+        return Promise.all(/*! import() */[__webpack_require__.e(129), __webpack_require__.e(5), __webpack_require__.e(131)]).then(__webpack_require__.bind(null, /*! ./views/DashboardStats.vue */ "./resources/js/src/views/DashboardStats.vue"));
+      },
+      meta: {
+        rule: 'editor'
+      }
+    }, {
       path: '/dashboard/ifx-trading-market',
       name: 'dashboard-market',
       component: function component() {
-        return Promise.all(/*! import() */[__webpack_require__.e(2), __webpack_require__.e(5), __webpack_require__.e(63)]).then(__webpack_require__.bind(null, /*! ./views/DashboardAnalytics.vue */ "./resources/js/src/views/DashboardAnalytics.vue"));
+        return __webpack_require__.e(/*! import() */ 2).then(__webpack_require__.bind(null, /*! ./views/DashboardMarket.vue */ "./resources/js/src/views/DashboardMarket.vue"));
       },
       meta: {
         rule: 'editor'
@@ -112017,7 +112029,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
       path: '/dashboard/ecommerce',
       name: 'dashboard-ecommerce',
       component: function component() {
-        return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(2), __webpack_require__.e(5), __webpack_require__.e(82)]).then(__webpack_require__.bind(null, /*! ./views/DashboardECommerce.vue */ "./resources/js/src/views/DashboardECommerce.vue"));
+        return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(129), __webpack_require__.e(5), __webpack_require__.e(82)]).then(__webpack_require__.bind(null, /*! ./views/DashboardECommerce.vue */ "./resources/js/src/views/DashboardECommerce.vue"));
       },
       meta: {
         rule: 'admin'
@@ -112346,7 +112358,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
       path: '/ui-elements/card/statistics',
       name: 'statistics-cards',
       component: function component() {
-        return Promise.all(/*! import() */[__webpack_require__.e(2), __webpack_require__.e(88)]).then(__webpack_require__.bind(null, /*! ./views/ui-elements/card/CardStatistics.vue */ "./resources/js/src/views/ui-elements/card/CardStatistics.vue"));
+        return Promise.all(/*! import() */[__webpack_require__.e(129), __webpack_require__.e(88)]).then(__webpack_require__.bind(null, /*! ./views/ui-elements/card/CardStatistics.vue */ "./resources/js/src/views/ui-elements/card/CardStatistics.vue"));
       },
       meta: {
         breadcrumb: [{
@@ -112365,7 +112377,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
       path: '/ui-elements/card/analytics',
       name: 'analytics-cards',
       component: function component() {
-        return Promise.all(/*! import() */[__webpack_require__.e(2), __webpack_require__.e(5), __webpack_require__.e(83)]).then(__webpack_require__.bind(null, /*! ./views/ui-elements/card/CardAnalytics.vue */ "./resources/js/src/views/ui-elements/card/CardAnalytics.vue"));
+        return Promise.all(/*! import() */[__webpack_require__.e(129), __webpack_require__.e(5), __webpack_require__.e(83)]).then(__webpack_require__.bind(null, /*! ./views/ui-elements/card/CardAnalytics.vue */ "./resources/js/src/views/ui-elements/card/CardAnalytics.vue"));
       },
       meta: {
         breadcrumb: [{
@@ -113260,7 +113272,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
       path: '/charts-and-maps/charts/apex-charts',
       name: 'extra-component-charts-apex-charts',
       component: function component() {
-        return Promise.all(/*! import() */[__webpack_require__.e(2), __webpack_require__.e(102)]).then(__webpack_require__.bind(null, /*! @/views/charts-and-maps/charts/apex-charts/ApexCharts.vue */ "./resources/js/src/views/charts-and-maps/charts/apex-charts/ApexCharts.vue"));
+        return Promise.all(/*! import() */[__webpack_require__.e(129), __webpack_require__.e(102)]).then(__webpack_require__.bind(null, /*! @/views/charts-and-maps/charts/apex-charts/ApexCharts.vue */ "./resources/js/src/views/charts-and-maps/charts/apex-charts/ApexCharts.vue"));
       },
       meta: {
         breadcrumb: [{
