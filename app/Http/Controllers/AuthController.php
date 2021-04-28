@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Mail\VerificationMail;
 use Auth;
 use Validator;
 use Log;
@@ -83,11 +84,15 @@ class AuthController extends Controller
         $user->email = $request->post('email');
         $user->password = bcrypt($request->post('password'));
         $user->save();
+        $code = "1235676";
         Log::info($request->post('password'));
+        $name = $user->first_name." ".$user->last_name;
+        dispatch(new VerificationMail($name, $code));
 
         if (Auth::attempt(request(['email', 'password']))) {
             $user = Auth::user();
             $token =  $user->createToken('Personal Access Token')->accessToken;
+
        
             return response()
                 ->json([
