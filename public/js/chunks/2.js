@@ -171,7 +171,7 @@ var render = function() {
                 },
                 [
                   _c("div", { staticClass: "py-4 px-6" }, [
-                    _c("h1", { staticClass: "text-4xl font-bold" }, [
+                    _c("h1", { staticClass: "text-3xl font-bold" }, [
                       _vm._v("Team Members")
                     ])
                   ]),
@@ -250,7 +250,13 @@ var render = function() {
                                     { attrs: { data: data[indextr].orderNo } },
                                     [
                                       _c("span", [
-                                        _vm._v(_vm._s(data[indextr].created_at))
+                                        _vm._v(
+                                          _vm._s(
+                                            _vm._f("formatDate")(
+                                              data[indextr].created_at
+                                            )
+                                          )
+                                        )
                                       ])
                                     ]
                                   )
