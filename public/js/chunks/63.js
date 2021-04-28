@@ -674,9 +674,9 @@ var render = function() {
                                   },
                                   [
                                     _vm._v(
-                                      "\n                    1 BTC = " +
+                                      "\n                    $" +
                                         _vm._s(_vm.latest_price.y[3]) +
-                                        " USD\n                  "
+                                        "\n                  "
                                     )
                                   ]
                                 )
