@@ -8,8 +8,7 @@ class CreateWebhookCallsTable extends Migration
     public function up()
     {
         Schema::create('webhook_calls', function (Blueprint $table) {
-            $table->bigIncrements('id');
-
+            $table->id();
             $table->string('name');
             $table->text('payload')->nullable();
             $table->text('exception')->nullable();
