@@ -62,10 +62,21 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      members: []
+      members: [],
+      referral_link: ""
     };
   },
   created: function created() {
@@ -75,6 +86,7 @@ __webpack_require__.r(__webpack_exports__);
       if (response.data) {
         var owner = response.data.owner;
         var members = [owner].concat(response.data.members);
+        _this.referral_link = "https://evolvenetworkoffice.com/access/register/".concat(owner.uid);
         _this.members = members;
       }
     });
@@ -83,6 +95,18 @@ __webpack_require__.r(__webpack_exports__);
     })["catch"](function (error) {
       console.log(error);
     });
+  },
+  methods: {
+    onCopy: function onCopy() {
+      this.$vs.notify({
+        title: "Success",
+        text: "Referral Link copied successfully",
+        color: "primary ",
+        iconPack: "feather",
+        position: "top-center",
+        icon: "icon-check-circle"
+      });
+    }
   }
 });
 
@@ -170,11 +194,45 @@ var render = function() {
                   slot: "no-body"
                 },
                 [
-                  _c("div", { staticClass: "py-4 px-6" }, [
-                    _c("h1", { staticClass: "text-3xl font-bold" }, [
-                      _vm._v("Team Members")
-                    ])
-                  ]),
+                  _c(
+                    "div",
+                    { staticClass: "flex justify-between py-4 px-6" },
+                    [
+                      _c("h1", { staticClass: "text-3xl font-bold" }, [
+                        _vm._v("Team Members")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "vs-button",
+                        {
+                          directives: [
+                            {
+                              name: "clipboard",
+                              rawName: "v-clipboard:copy",
+                              value: _vm.referral_link,
+                              expression: "referral_link",
+                              arg: "copy"
+                            },
+                            {
+                              name: "clipboard",
+                              rawName: "v-clipboard:success",
+                              value: _vm.onCopy,
+                              expression: "onCopy",
+                              arg: "success"
+                            }
+                          ],
+                          attrs: {
+                            color: "primary",
+                            type: "flat",
+                            "icon-pack": "feather",
+                            icon: "icon-copy"
+                          }
+                        },
+                        [_vm._v("\n              Referral Link\n            ")]
+                      )
+                    ],
+                    1
+                  ),
                   _vm._v(" "),
                   _c(
                     "vs-table",

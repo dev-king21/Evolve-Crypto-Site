@@ -291,8 +291,8 @@ var render = function() {
       _c(
         "vs-button",
         {
-          staticClass: "text-primary font-bold w-1/2",
-          attrs: { color: "white", type: "filled" },
+          staticClass: "text-white font-bold w-1/2",
+          attrs: { color: "primary", type: "filled" },
           on: {
             click: function($event) {
               return _vm.$refs.alfacoins_form.submit()

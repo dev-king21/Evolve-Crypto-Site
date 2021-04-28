@@ -425,6 +425,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
@@ -489,7 +490,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../../node_module
 
 
 // module
-exports.push([module.i, ".grid-view-item[data-v-6afa8391] {\n  /* background: linear-gradient(\n    to bottom,\n    rgb(15, 22, 66) 44%,\n    rgba(15, 22, 66, 0.51) 73%,\n    rgba(44, 48, 60, 0) 100%\n  ); */\n}\n.grid-view-item .grid-view-img[data-v-6afa8391] {\n  max-width: 100%;\n  max-height: 100%;\n  width: auto;\n  transition: 0.35s;\n}\n[dir] .grid-view-item[data-v-6afa8391]:hover {\n  transform: translateY(-5px);\n  box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.25);\n}\n.grid-view-item:hover .grid-view-img[data-v-6afa8391] {\n  opacity: 0.9;\n}", ""]);
+exports.push([module.i, ".grid-view-item[data-v-6afa8391] {\n  /* background: linear-gradient(\n    to bottom,\n    rgb(15, 22, 66) 44%,\n    rgba(15, 22, 66, 0.51) 73%,\n    rgba(44, 48, 60, 0) 100%\n  ); */\n}\n.grid-view-item .btc-logo[data-v-6afa8391] {\n  opacity: 0.7;\n  width: 30%;\n  height: auto;\n}\n.grid-view-item .grid-view-img[data-v-6afa8391] {\n  max-width: 100%;\n  max-height: 100%;\n  width: auto;\n  transition: 0.35s;\n}\n[dir] .grid-view-item[data-v-6afa8391]:hover {\n  transform: translateY(-5px);\n  box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.25);\n}\n.grid-view-item:hover .grid-view-img[data-v-6afa8391] {\n  opacity: 0.9;\n}", ""]);
 
 // exports
 
@@ -586,8 +587,8 @@ var render = function() {
       _c(
         "vs-button",
         {
-          staticClass: "text-primary font-bold w-1/2",
-          attrs: { color: "white", type: "filled" },
+          staticClass: "text-white font-bold w-1/2",
+          attrs: { color: "primary", type: "filled" },
           on: {
             click: function($event) {
               return _vm.$refs.alfacoins_form.submit()
@@ -1047,47 +1048,31 @@ var render = function() {
     _vm._g(
       {
         staticClass: "grid-view-item mb-base overflow-hidden",
-        attrs: {
-          "content-color": "#fff",
-          "card-background":
-            "linear-gradient(120deg ,rgba(255,159,67, 1), rgba(255,159,67, .8)), url(" +
-            _vm.card_bg_img_2 +
-            ")"
-        }
+        attrs: { "content-color": "#fff", "card-background": "white" }
       },
       _vm.$listeners
     ),
     [
       _c("template", { slot: "no-body" }, [
         _c("div", { staticClass: "px-4 py-4" }, [
-          _c("h3", { staticClass: "text-white font-bold px-4" }, [
+          _c("h3", { staticClass: "font-bold px-4" }, [
             _vm._v("\n        " + _vm._s(_vm.item.name) + "\n      ")
           ])
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "item-details px-8 py-4" }, [
           _c("div", { staticClass: "flex justify-between items-center" }, [
-            _c(
-              "div",
-              {
-                staticClass:
-                  "text-white border border-solid border-white flex py-1 px-2 rounded"
-              },
-              [
-                _c("span", { staticClass: "text-sm mr-1" }, [
-                  _vm._v(_vm._s(_vm.item.rating))
-                ]),
-                _vm._v(" "),
-                _c("feather-icon", {
-                  attrs: { icon: "StarIcon", svgClasses: "h-4 w-4" }
-                })
-              ],
-              1
-            ),
+            _c("h4", { staticClass: "font-bold px-8 text-3xl text-primary" }, [
+              _vm._v("\n          $" + _vm._s(_vm.item.price) + "\n        ")
+            ]),
             _vm._v(" "),
-            _c("h4", { staticClass: "font-bold text-3xl text-white" }, [
-              _vm._v("$" + _vm._s(_vm.item.price))
-            ])
+            _c("img", {
+              staticClass: "btc-logo",
+              attrs: {
+                src:
+                  "https://raw.githubusercontent.com/rainner/binance-watch/master/public/images/icons/btc_.png"
+              }
+            })
           ])
         ]),
         _vm._v(" "),
