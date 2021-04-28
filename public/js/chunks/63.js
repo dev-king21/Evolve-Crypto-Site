@@ -232,6 +232,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -267,7 +275,8 @@ var themeColors = ["#7367F0", "#28C76F", "#EA5455", "#FF9F43", "#1E1E1E"];
       analyticsData: _ui_elements_card_analyticsData_js__WEBPACK_IMPORTED_MODULE_1__["default"],
       dispatchedOrders: [],
       btc_symbol: "BTCUSDT",
-      btc_interval: undefined
+      btc_interval: undefined,
+      latest_price: {}
     };
   },
   components: {
@@ -351,6 +360,7 @@ var themeColors = ["#7367F0", "#28C76F", "#EA5455", "#FF9F43", "#1E1E1E"];
             };
           });
 
+          if (data.length != 0) _this2.latest_price = data[data.length - 1];
           _this2.btcCandleChart.series = [{
             data: data
           }];
@@ -652,7 +662,25 @@ var render = function() {
                           }),
                           _vm._v(" "),
                           _c("h2", { staticClass: "font-bold" }, [
-                            _vm._v("Bitcoin (BTC) / USDT")
+                            _vm._v(
+                              "\n                  Bitcoin(BTC)/USD\n                  "
+                            ),
+                            _vm.latest_price.y && _vm.latest_price.y.length == 4
+                              ? _c(
+                                  "span",
+                                  {
+                                    staticClass:
+                                      "text-primary font-bold text-2xl ml-4"
+                                  },
+                                  [
+                                    _vm._v(
+                                      "\n                    1 BTC = " +
+                                        _vm._s(_vm.latest_price.y[3]) +
+                                        " USD\n                  "
+                                    )
+                                  ]
+                                )
+                              : _vm._e()
                           ])
                         ])
                       ]
