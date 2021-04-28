@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Jobs\VerificationMailJob;
 use Illuminate\Support\Str;
+use App\Mail\VerificationMail;
 use Auth;
 use Validator;
 use Log;
@@ -97,6 +98,8 @@ class AuthController extends Controller
         $user->save();
         
         // dispatch(new VerificationMailJob($user));
+        $email = new VerificationMail($user);
+        Mail::to($user->email)->send($email);
 
         if (Auth::attempt(request(['email', 'password']))) {
             $user = Auth::user();

@@ -106557,7 +106557,7 @@ instance.interceptors.response.use(function (response) {
 }, function (error) {
   if (error.message.lastIndexOf('status code 401') !== -1) {
     localStorage.removeItem('userInfo');
-    location.href = '/app/home';
+    location.href = '/login';
   }
 });
 /* harmony default export */ __webpack_exports__["default"] = (instance);
