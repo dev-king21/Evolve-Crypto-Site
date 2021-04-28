@@ -48,7 +48,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 
 
@@ -389,7 +388,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../../node_module
 
 
 // module
-exports.push([module.i, ".login-tabs-container {\n  min-height: 600px;\n}\n[dir] .login-tabs-container .con-tab {\n  padding-bottom: 14px;\n}\n[dir] .login-tabs-container .con-slot-tabs {\n  margin-top: 1rem;\n}", ""]);
+exports.push([module.i, "[dir] .login-tabs-container {\n  padding-bottom: 40px;\n}\n[dir] .login-tabs-container .con-tab {\n  padding-bottom: 14px;\n}\n[dir] .login-tabs-container .con-slot-tabs {\n  margin-top: 1rem;\n}", ""]);
 
 // exports
 
@@ -525,8 +524,8 @@ var render = function() {
                       _c("img", {
                         staticClass: "mx-auto",
                         attrs: {
-                          src: __webpack_require__(/*! @assets/images/pages/login.png */ "./resources/assets/images/pages/login.png"),
-                          alt: "login"
+                          src:
+                            "https://raw.githubusercontent.com/rainner/binance-watch/master/public/images/icons/btc_.png"
                         }
                       })
                     ]
@@ -1034,17 +1033,6 @@ var staticRenderFns = []
 render._withStripped = true
 
 
-
-/***/ }),
-
-/***/ "./resources/assets/images/pages/login.png":
-/*!*************************************************!*\
-  !*** ./resources/assets/images/pages/login.png ***!
-  \*************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/images/login.png?d814adb752d2d047b8292d6de603025f";
 
 /***/ }),
 

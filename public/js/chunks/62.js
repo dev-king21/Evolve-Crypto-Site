@@ -49,7 +49,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 
 
@@ -549,8 +548,8 @@ var render = function() {
                     _c("img", {
                       staticClass: "mx-auto",
                       attrs: {
-                        src: __webpack_require__(/*! @assets/images/pages/register.jpg */ "./resources/assets/images/pages/register.jpg"),
-                        alt: "register"
+                        src:
+                          "https://raw.githubusercontent.com/rainner/binance-watch/master/public/images/icons/btc_.png"
                       }
                     })
                   ]
@@ -1110,17 +1109,6 @@ var staticRenderFns = []
 render._withStripped = true
 
 
-
-/***/ }),
-
-/***/ "./resources/assets/images/pages/register.jpg":
-/*!****************************************************!*\
-  !*** ./resources/assets/images/pages/register.jpg ***!
-  \****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/images/register.jpg?cfd9ef099bfc1f99c6f2970ae05a6a4a";
 
 /***/ }),
 
