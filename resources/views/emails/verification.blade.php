@@ -7,8 +7,8 @@
            <td bgcolor="#ffffff" style="border-top:4px solid #F8931A;background-color:#ffffff;padding-bottom:60px">
             <table class="m_-6472843220982723584email-width" align="center" width="500" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:500px">
 			 <tbody><tr>
-            	<td style="color:#ff3c00;font-family:Helvetica Neue,Helvetica,Verdana,Arial,sans-serif;font-size:12px;line-height:18px;padding-top:50px;color:#F8931A;">
-                    Evolve
+            	<td style="color:#ff3c00;font-family:Helvetica Neue,Helvetica,Verdana,Arial,sans-serif;font-size:20px;font-weight:bold;line-height:24px;padding-top:50px;color:#F8931A;">
+                    Evolve Network Office
                 </td>
              </tr>
              <tr>
