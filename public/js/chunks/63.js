@@ -1060,7 +1060,7 @@ var render = function() {
     [
       _c("template", { slot: "no-body" }, [
         _c("div", { staticClass: "px-4 py-4" }, [
-          _c("h3", { staticClass: "text-white px-4" }, [
+          _c("h3", { staticClass: "text-white font-bold px-4" }, [
             _vm._v("\n        " + _vm._s(_vm.item.name) + "\n      ")
           ])
         ]),
