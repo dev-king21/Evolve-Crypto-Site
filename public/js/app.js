@@ -92026,6 +92026,15 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
         rule: 'editor'
       }
     }, {
+      path: '/register/:referral',
+      name: 'auth-register-referral',
+      component: function component() {
+        return __webpack_require__.e(/*! import() */ 62).then(__webpack_require__.bind(null, /*! @/views/pages/register/Register.vue */ "./resources/js/src/views/pages/register/Register.vue"));
+      },
+      meta: {
+        rule: 'editor'
+      }
+    }, {
       path: '/forgot-password',
       name: 'page-forgot-password',
       component: function component() {
@@ -92113,7 +92122,7 @@ router.afterEach(function () {
   }
 });
 router.beforeEach(function (to, from, next) {
-  if (to.path === '/login' || to.path === '/register') if (localStorage.getItem('accessToken') && localStorage.getItem('userInfo')) {
+  if (to.path === '/login' || to.path === '/register' || to.name === 'auth-register-referral') if (localStorage.getItem('accessToken') && localStorage.getItem('userInfo')) {
     router.push({
       path: '/'
     });

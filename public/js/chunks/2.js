@@ -62,20 +62,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -85,6 +71,13 @@ __webpack_require__.r(__webpack_exports__);
   created: function created() {
     var _this = this;
 
+    this.$http.get("/team/members").then(function (response) {
+      if (response.data) {
+        var owner = response.data.owner;
+        var members = [owner].concat(response.data.members);
+        _this.members = members;
+      }
+    });
     this.$http.get("/api/table/dispatched-orders").then(function (response) {
       _this.members = response.data;
     })["catch"](function (error) {
@@ -200,11 +193,23 @@ var render = function() {
                                 [
                                   _c(
                                     "vs-td",
-                                    { attrs: { data: data[indextr].orderNo } },
+                                    { attrs: { data: data[indextr].id } },
+                                    [
+                                      _c("span", [
+                                        _vm._v("#" + _vm._s(data[indextr].id))
+                                      ])
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "vs-td",
+                                    { attrs: { data: data[indextr].id } },
                                     [
                                       _c("span", [
                                         _vm._v(
-                                          "#" + _vm._s(data[indextr].orderNo)
+                                          _vm._s(data[indextr].first_name) +
+                                            "\n                    " +
+                                            _vm._s(data[indextr].last_name)
                                         )
                                       ])
                                     ]
@@ -212,76 +217,30 @@ var render = function() {
                                   _vm._v(" "),
                                   _c(
                                     "vs-td",
-                                    { attrs: { data: data[indextr].location } },
+                                    { attrs: { data: data[indextr].id } },
                                     [
                                       _c("span", [
-                                        _vm._v(_vm._s(data[indextr].location))
+                                        _vm._v(_vm._s(data[indextr].uid))
                                       ])
                                     ]
                                   ),
                                   _vm._v(" "),
                                   _c(
                                     "vs-td",
-                                    { attrs: { data: data[indextr].location } },
+                                    { attrs: { data: data[indextr].id } },
                                     [
                                       _c("span", [
-                                        _vm._v(_vm._s(data[indextr].location))
+                                        _vm._v(_vm._s(data[indextr].country))
                                       ])
                                     ]
                                   ),
                                   _vm._v(" "),
                                   _c(
                                     "vs-td",
-                                    { attrs: { data: data[indextr].orderNo } },
-                                    [
-                                      _c(
-                                        "ul",
-                                        {
-                                          staticClass: "users-liked user-list"
-                                        },
-                                        _vm._l(
-                                          data[indextr].usersLiked,
-                                          function(user, userIndex) {
-                                            return _c(
-                                              "li",
-                                              { key: userIndex },
-                                              [
-                                                _c(
-                                                  "vx-tooltip",
-                                                  {
-                                                    attrs: {
-                                                      text: user.name,
-                                                      position: "bottom"
-                                                    }
-                                                  },
-                                                  [
-                                                    _c("vs-avatar", {
-                                                      staticClass:
-                                                        "border-2 border-white border-solid -m-1",
-                                                      attrs: {
-                                                        src: user.img,
-                                                        size: "30px"
-                                                      }
-                                                    })
-                                                  ],
-                                                  1
-                                                )
-                                              ],
-                                              1
-                                            )
-                                          }
-                                        ),
-                                        0
-                                      )
-                                    ]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "vs-td",
-                                    { attrs: { data: data[indextr].orderNo } },
+                                    { attrs: { data: data[indextr].id } },
                                     [
                                       _c("span", [
-                                        _vm._v(_vm._s(data[indextr].location))
+                                        _vm._v(_vm._s(data[indextr].country))
                                       ])
                                     ]
                                   ),
@@ -291,17 +250,7 @@ var render = function() {
                                     { attrs: { data: data[indextr].orderNo } },
                                     [
                                       _c("span", [
-                                        _vm._v(_vm._s(data[indextr].startDate))
-                                      ])
-                                    ]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "vs-td",
-                                    { attrs: { data: data[indextr].orderNo } },
-                                    [
-                                      _c("span", [
-                                        _vm._v(_vm._s(data[indextr].estDelDate))
+                                        _vm._v(_vm._s(data[indextr].created_at))
                                       ])
                                     ]
                                   )
@@ -328,9 +277,7 @@ var render = function() {
                           _vm._v(" "),
                           _c("vs-th", [_vm._v("Package Purchased")]),
                           _vm._v(" "),
-                          _c("vs-th", [_vm._v("Start Date")]),
-                          _vm._v(" "),
-                          _c("vs-th", [_vm._v("EST DELIVERY DATE")])
+                          _c("vs-th", [_vm._v("Start Date")])
                         ],
                         1
                       )

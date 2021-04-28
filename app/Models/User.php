@@ -17,7 +17,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'first_name', 'last_name', 'uid', 'country', 'email', 'password',
+        'first_name', 'last_name', 'uid', 'country', 'email', 'password', 'referral_id', 'code'
     ];
 
     /**
@@ -26,7 +26,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
+        'password', 'remember_token', 'referral_id', 'code'
     ];
 
     /**
@@ -37,4 +37,9 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function members()
+    {
+        return $this->hasMany('App\Models\User', 'referral_id');
+    } 
 }

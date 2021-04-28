@@ -13,6 +13,8 @@ Route::post('/auth/register/:referral', 'AuthController@register');
 
 Route::group(['middleware' => 'auth:api'], function() {
     Route::post('/auth/logout', 'AuthController@logout');
+    Route::get('/team/members', 'AccountController@getTeamMembers');
+
 });
 
 Route::webhooks('/access/api/notification/payment/evolve-indicator', 'alfacoins');

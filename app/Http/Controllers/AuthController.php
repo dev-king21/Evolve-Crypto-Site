@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Jobs\VerificationMailJob;
+use Illuminate\Support\Str;
 use Auth;
 use Validator;
 use Log;
@@ -76,6 +77,13 @@ class AuthController extends Controller
             ], 400);
         }
 
+        $referral = $request->post("referral");
+        $referral_user = null;
+        if ($referral != null) {
+            $referral_user = User::where(["uid" => $referral])->first();
+        }
+        
+        $code = Str::random(6);
         $user = new User;
         $user->first_name = $request->post('first_name');
         $user->last_name = $request->post('last_name');
@@ -83,11 +91,12 @@ class AuthController extends Controller
         $user->country = $request->post('country');
         $user->email = $request->post('email');
         $user->password = bcrypt($request->post('password'));
+        if ($referral_user != null)
+            $user->referral_id = $referral_user->id;
+        $user->code = $code;
         $user->save();
-        $code = "1235676";
-        Log::info($request->post('password'));
-        $name = $user->first_name." ".$user->last_name;
-        dispatch(new VerificationMailJob($user, $code));
+        
+        // dispatch(new VerificationMailJob($user));
 
         if (Auth::attempt(request(['email', 'password']))) {
             $user = Auth::user();

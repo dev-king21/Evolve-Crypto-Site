@@ -20,11 +20,9 @@ class VerificationMailJob implements ShouldQueue
      * @return void
      */
     public $user = '';
-    public $code = '';
-    public function __construct($user, $code)
+    public function __construct($user)
     {
         $this->user = $user;
-        $this->code = $code;
     }
 
     /**
@@ -34,8 +32,7 @@ class VerificationMailJob implements ShouldQueue
      */
     public function handle()
     {
-        $full_name = $this->user->first_name." ".$this->user->last_name;
-        $email = new VerificationMail($full_name, $this->code);
+        $email = new VerificationMail($this->user);
         Mail::to($this->user->email)->send($email);
     }
 }
