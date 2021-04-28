@@ -26,13 +26,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
     button_id: {
@@ -593,45 +586,20 @@ var render = function() {
       }),
       _vm._v(" "),
       _c(
-        "div",
+        "vs-button",
         {
-          staticClass:
-            "alfacoins-btn alfacoins-btn-default alfacoins-btn-3 alfacoins-btn-cur-LTCT alfacoins-btn-cur-1",
+          staticClass: "text-primary font-bold w-1/2",
+          attrs: { color: "white", type: "filled" },
           on: {
             click: function($event) {
               return _vm.$refs.alfacoins_form.submit()
             }
           }
         },
-        [
-          _c(
-            "div",
-            { staticClass: "alfacoins-btn-body alfacoins-btn-3-body" },
-            [
-              _c(
-                "div",
-                { staticClass: "alfacoins-btn-border alfacoins-btn-3-border" },
-                [
-                  _c(
-                    "div",
-                    {
-                      staticClass: "alfacoins-btn-inner alfacoins-btn-3-inner"
-                    },
-                    [
-                      _c("svg", { staticClass: "ico-21 ico-svg" }, [
-                        _c("use", { attrs: { "xlink:href": "#logo" } })
-                      ]),
-                      _vm._v(" "),
-                      _c("span", [_vm._v("Purchase")])
-                    ]
-                  )
-                ]
-              )
-            ]
-          )
-        ]
+        [_vm._v("\n    Purchase Now\n  ")]
       )
-    ]
+    ],
+    1
   )
 }
 var staticRenderFns = []
@@ -757,7 +725,7 @@ var render = function() {
                   "div",
                   { staticClass: "flex w-full justify-between" },
                   [
-                    _c("h2", { staticClass: "mb-1 font-bold text-4xl" }, [
+                    _c("h2", { staticClass: "mb-1 font-bold text-3xl" }, [
                       _vm._v("Daily Incoming")
                     ]),
                     _vm._v(" "),
@@ -1031,7 +999,9 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "my-4" }, [
-      _c("h2", { staticClass: "font-bold" }, [_vm._v("Packages")])
+      _c("h2", { staticClass: "font-bold text-4xl" }, [
+        _vm._v("Trading Packages")
+      ])
     ])
   }
 ]
@@ -1064,7 +1034,7 @@ var render = function() {
         attrs: {
           "content-color": "#fff",
           "card-background":
-            "linear-gradient(120deg ,rgba(247,97,161,0.5), rgba(140,27,171,.8)), url(" +
+            "linear-gradient(120deg ,rgba(255,159,67, 1), rgba(255,159,67, .8)), url(" +
             _vm.card_bg_img_2 +
             ")"
         }
@@ -1088,7 +1058,7 @@ var render = function() {
                 "div",
                 {
                   staticClass:
-                    "text-warning border border-solid border-warning flex py-1 px-2 rounded"
+                    "text-white border border-solid border-white flex py-1 px-2 rounded"
                 },
                 [
                   _c("span", { staticClass: "text-sm mr-1" }, [
@@ -1102,7 +1072,7 @@ var render = function() {
                 1
               ),
               _vm._v(" "),
-              _c("h4", { staticClass: "font-bold text-success" }, [
+              _c("h4", { staticClass: "font-bold text-white" }, [
                 _vm._v("$" + _vm._s(_vm.item.price))
               ])
             ])
