@@ -425,18 +425,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
@@ -1070,57 +1058,48 @@ var render = function() {
       _vm.$listeners
     ),
     [
-      _c(
-        "template",
-        { slot: "no-body" },
-        [
-          _c("div", { staticClass: "px-4 py-4" }, [
-            _c("h3", { staticClass: "text-white px-4" }, [
-              _vm._v("\n        " + _vm._s(_vm.item.name) + "\n      ")
+      _c("template", { slot: "no-body" }, [
+        _c("div", { staticClass: "px-4 py-4" }, [
+          _c("h3", { staticClass: "text-white px-4" }, [
+            _vm._v("\n        " + _vm._s(_vm.item.name) + "\n      ")
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "item-details px-8 py-4" }, [
+          _c("div", { staticClass: "flex justify-between items-center" }, [
+            _c(
+              "div",
+              {
+                staticClass:
+                  "text-white border border-solid border-white flex py-1 px-2 rounded"
+              },
+              [
+                _c("span", { staticClass: "text-sm mr-1" }, [
+                  _vm._v(_vm._s(_vm.item.rating))
+                ]),
+                _vm._v(" "),
+                _c("feather-icon", {
+                  attrs: { icon: "StarIcon", svgClasses: "h-4 w-4" }
+                })
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _c("h4", { staticClass: "font-bold text-3xl text-white" }, [
+              _vm._v("$" + _vm._s(_vm.item.price))
             ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "item-details px-8 py-4" }, [
-            _c("div", { staticClass: "flex justify-between items-center" }, [
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "text-white border border-solid border-white flex py-1 px-2 rounded"
-                },
-                [
-                  _c("span", { staticClass: "text-sm mr-1" }, [
-                    _vm._v(_vm._s(_vm.item.rating))
-                  ]),
-                  _vm._v(" "),
-                  _c("feather-icon", {
-                    attrs: { icon: "StarIcon", svgClasses: "h-4 w-4" }
-                  })
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c("h4", { staticClass: "font-bold text-white" }, [
-                _vm._v("$" + _vm._s(_vm.item.price))
-              ])
-            ])
-          ]),
-          _vm._v(" "),
-          _c(
-            "div",
-            { staticClass: "p-4 text-center" },
-            [
-              _c("alfa-coin-button", {
-                attrs: { button_id: _vm.item.button_id }
-              })
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _vm._t("action-buttons")
-        ],
-        2
-      )
+          ])
+        ]),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "px-4 py-8 text-center" },
+          [
+            _c("alfa-coin-button", { attrs: { button_id: _vm.item.button_id } })
+          ],
+          1
+        )
+      ])
     ],
     2
   )
