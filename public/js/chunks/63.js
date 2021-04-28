@@ -670,7 +670,7 @@ var render = function() {
                                   "span",
                                   {
                                     staticClass:
-                                      "text-primary font-bold text-2xl ml-4"
+                                      "text-success font-bold text-2xl ml-4"
                                   },
                                   [
                                     _vm._v(
