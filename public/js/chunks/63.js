@@ -1233,7 +1233,7 @@ __webpack_require__.r(__webpack_exports__);
   name: "Evolve ECN",
   description: "",
   button_id: "6087bcb5706ac",
-  price: 1824.9,
+  price: 1824,
   image: ""
 }, {
   id: 6,
