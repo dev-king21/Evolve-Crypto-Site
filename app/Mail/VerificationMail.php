@@ -20,8 +20,8 @@ class VerificationMail extends Mailable
     public $code = ''; 
     public function __construct($name, $code)
     {
-        $name = $name;
-        $code = $code;
+        $this->name = $name;
+        $this->code = $code;
     }
 
     /**
@@ -34,7 +34,7 @@ class VerificationMail extends Mailable
         return $this->view('emails.verification')
                 ->with([
                     'name' => $this->name, 
-                    'code' => $code
+                    'code' => $this->code
                 ]);
     }
 }
