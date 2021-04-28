@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Jobs\VerificationMailJob;
 use Illuminate\Support\Str;
+use Mail;
 use App\Mail\VerificationMail;
 use Auth;
 use Validator;
