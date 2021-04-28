@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
-use App\Mail\VerificationMail;
+use App\Jobs\VerificationMailJob;
 use Auth;
 use Validator;
 use Log;
@@ -87,7 +87,7 @@ class AuthController extends Controller
         $code = "1235676";
         Log::info($request->post('password'));
         $name = $user->first_name." ".$user->last_name;
-        dispatch(new VerificationMail($name, $code));
+        dispatch(new VerificationMailJob($user, $code));
 
         if (Auth::attempt(request(['email', 'password']))) {
             $user = Auth::user();
