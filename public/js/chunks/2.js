@@ -190,7 +190,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../../node_module
 
 
 // module
-exports.push([module.i, ".grid-view-item[data-v-6afa8391] {\n  /* background: linear-gradient(\n    to bottom,\n    rgb(15, 22, 66) 44%,\n    rgba(15, 22, 66, 0.51) 73%,\n    rgba(44, 48, 60, 0) 100%\n  ); */\n}\n.grid-view-item .btc-logo[data-v-6afa8391] {\n  opacity: 0.7;\n  width: 30%;\n  height: auto;\n}\n.grid-view-item .grid-view-img[data-v-6afa8391] {\n  max-width: 100%;\n  max-height: 100%;\n  width: auto;\n  transition: 0.35s;\n}\n[dir] .grid-view-item[data-v-6afa8391]:hover {\n  transform: translateY(-5px);\n  box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.25);\n}\n.grid-view-item:hover .grid-view-img[data-v-6afa8391] {\n  opacity: 0.9;\n}", ""]);
+exports.push([module.i, ".grid-view-item[data-v-6afa8391] {\n  /* background: linear-gradient(\n    to bottom,\n    rgb(15, 22, 66) 44%,\n    rgba(15, 22, 66, 0.51) 73%,\n    rgba(44, 48, 60, 0) 100%\n  ); */\n}\n.grid-view-item .btc-logo[data-v-6afa8391] {\n  opacity: 0.85;\n  width: 30%;\n  height: auto;\n}\n.grid-view-item .grid-view-img[data-v-6afa8391] {\n  max-width: 100%;\n  max-height: 100%;\n  width: auto;\n  transition: 0.35s;\n}\n[dir] .grid-view-item[data-v-6afa8391]:hover {\n  transform: translateY(-5px);\n  box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.25);\n}\n.grid-view-item:hover .grid-view-img[data-v-6afa8391] {\n  opacity: 0.9;\n}", ""]);
 
 // exports
 
